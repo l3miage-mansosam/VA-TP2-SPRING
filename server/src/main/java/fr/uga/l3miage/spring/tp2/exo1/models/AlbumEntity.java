@@ -1,15 +1,17 @@
 package fr.uga.l3miage.spring.tp2.exo1.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Set;
 
 @Entity
-@Getter
 @Setter
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AlbumEntity {
     @Id
     private String title;

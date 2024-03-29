@@ -1,7 +1,7 @@
 package fr.uga.l3miage.spring.tp2.exo1.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.annotations.Info;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,8 +9,11 @@ import javax.persistence.ManyToOne;
 import java.time.Duration;
 
 @Entity
-@Getter
 @Setter
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class SongEntity {
     @Id
     private String title;
@@ -22,4 +25,6 @@ public class SongEntity {
 
     @ManyToOne
     private ArtistEntity artistEntity;
+
+
 }
